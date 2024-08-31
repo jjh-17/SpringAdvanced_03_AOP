@@ -2,16 +2,24 @@ package hello.aop;
 
 import hello.aop.order.OrderRepository;
 import hello.aop.order.OrderService;
+import hello.aop.order.aop.*;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.aop.support.AopUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.context.annotation.Import;
 
 import static org.assertj.core.api.Assertions.*;
 
 @Slf4j
+//@Import(AspectV1.class)
+//@Import(AspectV2.class)
+//@Import(AspectV3.class)
+//@Import(AspectV4.class)
+//@Import({AspectV5.LogAspect.class, AspectV5.TxAspect.class})
+@Import(AspectV6.class)
 @SpringBootTest
 public class AopTest {
 
